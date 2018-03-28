@@ -1,0 +1,16 @@
+.light-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#van-light, .kimmi-light {
+    width: 250px;
+    height: 250px;
+    border-style: solid;
+    border-radius: 85%;
+    border-width: 2px;
+}
+
+#van-light:hover, .kimmi-light:hover {
+    background: lightblue;
+}
