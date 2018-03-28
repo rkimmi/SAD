@@ -3,14 +3,16 @@
     flex-direction: row;
 }
 
-#van-light, .kimmi-light {
-    width: 250px;
-    height: 250px;
+#van-light, #kimmi-light {
+    width: 200px;
+    height: 200px;
     border-style: solid;
     border-radius: 85%;
     border-width: 2px;
+    border-color:  lightblue;
+    margin: 20px;
 }
 
-#van-light:hover, .kimmi-light:hover {
+#van-light:hover, #kimmi-light:hover {
     background: lightblue;
 }
