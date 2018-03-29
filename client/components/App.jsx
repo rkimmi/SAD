@@ -6,18 +6,30 @@ class App extends React.Component {
         super(props)
         this.state = {
             isHovered: false,
-            soundPlaying: 'sounds/vanessa.wav',
+            soundPlaying: '',
             playStatus: Sound.status.PAUSED
 
         }
-        this.makeSound = this.makeSound.bind(this)
+        this.makeKimmiSound = this.makeKimmiSound.bind(this)
+        this.makeVanSound = this.makeVanSound.bind(this)
         this.pauseSound = this.pauseSound.bind(this)
     }
  
-    makeSound() {
+    makeKimmiSound() {
         this.setState({
             isHovered: true,
+            soundPlaying: 'sounds/three2.wav',
             playStatus: Sound.status.PLAYING
+
+        })
+    }
+
+    makeVanSound() {
+        this.setState({
+            isHovered: true,
+            soundPlaying: 'sounds/vanessa.wav',
+            playStatus: Sound.status.PLAYING
+
         })
     }
 
@@ -33,9 +45,9 @@ class App extends React.Component {
             <div>
                 <h4>Seasonal Affective Thinking</h4>
                 <div className='light-container'>
-                    <div className='van-light'>V</div>
+                    <div className='van-light' onMouseEnter={this.makeVanSound} onMouseLeave={this.pauseSound}>V</div>
                     <Sound url={this.state.soundPlaying} playStatus={this.state.playStatus} /> 
-                    <div className='kimmi-light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>K</div>
+                    <div className='kimmi-light' onMouseEnter={this.makeKimmiSound} onMouseLeave={this.pauseSound}>K</div>
                 </div>
             </div>
         )
