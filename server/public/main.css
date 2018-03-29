@@ -11,16 +11,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 20%;
+    border-radius: 37%;
+    border-style: solid;
+    border-color: white;
     margin: 20px;
 }
 
 .van-light:hover {
-    background: lightblue;
+    border-style: dotted;
+    border-color: blue;
 }
 
 .kimmi-light:hover {
-    background: burlywood;
+    border-style: dotted;
+    border-color: green;
 }
 
 h1 {
