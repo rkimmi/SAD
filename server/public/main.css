@@ -4,18 +4,23 @@
 }
 
 
-#van-light, #kimmi-light {
+.van-light, .kimmi-light {
     width: 300px;
     height: 300px;
-    border-style: solid;
-    border-radius: 85%;
-    border-width: 2px;
-    border-color:  lightblue;
+    background-image: url('leaf_2000x.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20%;
     margin: 20px;
 }
 
-#van-light:hover, #kimmi-light:hover {
+.van-light:hover {
     background: lightblue;
+}
+
+.kimmi-light:hover {
+    background: burlywood;
 }
 
 h1 {
