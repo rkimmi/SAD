@@ -33,14 +33,16 @@ class FigOne extends React.Component {
     render() {
         return (
             <div>
-            <div className='van-light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>V</div>
             <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} /> 
-                <Progress theme={{
+               <div className='light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}> 
+               <Progress type='circle' theme={{
                     success:
-                        { symbol: '🏄‍', color: '#e9aba9' },
-                    active: { color: '#f2db82' }
+                        { symbol: ' ', color: '#e9aba9' },
+                    active: { symbol: ' ', color: '#f2db82' },
+                    default: {symbol: ' ', color: '#d63811'}
                 }}
-                    percent={100}/>
+                    percent={20}/>
+                    </div>
             </div>
         )
     }

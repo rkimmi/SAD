@@ -33,14 +33,15 @@ class FigTwo extends React.Component {
     render() {
         return (
             <div>
-            <div className='kimmi-light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>K</div>
+            <div className='light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
             <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} /> 
-            <Progress theme={{
+            <Progress type='circle' theme={{
                     success:
-                        { symbol: '🏄‍', color: '#e9aba9' },
+                        { symbol: ' ', color: '#e9aba9' },
                     active: { color: '#f2db82' }
                 }}
-                    percent={80}/>
+                    percent={100}/>
+            </div>
             </div>
         )
     }

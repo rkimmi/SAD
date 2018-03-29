@@ -3,18 +3,13 @@
     flex-direction: row;
 }
 
+.light {
+ width: 100px;
+ height: 100px;
+}
 
-.van-light, .kimmi-light {
-    width: 300px;
-    height: 300px;
-    background-image: url('leaf_2000x.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 37%;
-    border-style: solid;
-    border-color: white;
-    margin: 20px;
+.van-light {
+
 }
 
 .van-light:hover {
