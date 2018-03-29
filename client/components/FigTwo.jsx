@@ -1,6 +1,8 @@
 import React from 'react'
 import Sound from 'react-sound'
 
+import { Progress } from 'react-sweet-progress';
+
 class FigTwo extends React.Component {
     constructor (props) {
         super (props)
@@ -33,6 +35,12 @@ class FigTwo extends React.Component {
             <div>
             <div className='kimmi-light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>K</div>
             <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} /> 
+            <Progress theme={{
+                    success:
+                        { symbol: '🏄‍', color: '#e9aba9' },
+                    active: { color: '#f2db82' }
+                }}
+                    percent={80}/>
             </div>
         )
     }
