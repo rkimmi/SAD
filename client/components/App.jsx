@@ -1,6 +1,8 @@
 import React from 'react'
 import Sound from 'react-sound'
 
+import FigOne from './FigOne'
+
 class App extends React.Component {
     constructor(props) {
         super(props)
@@ -12,9 +14,7 @@ class App extends React.Component {
             playVanStatus: Sound.status.PAUSED
         }
         this.makeKimmiSound = this.makeKimmiSound.bind(this)
-        this.makeVanSound = this.makeVanSound.bind(this)
         this.pauseKimmiSound = this.pauseKimmiSound.bind(this)
-        this.pauseVanSound = this.pauseVanSound.bind(this)
     }
  
     makeKimmiSound() {
@@ -24,12 +24,6 @@ class App extends React.Component {
         })
     }
 
-    makeVanSound() {
-        this.setState({
-            isHovered: true,
-            playVanStatus: Sound.status.PLAYING
-        })
-    }
 
     pauseKimmiSound() {
         this.setState({
@@ -38,20 +32,13 @@ class App extends React.Component {
         })
     }
 
-    pauseVanSound() {
-        this.setState({
-            isHovered: false,
-            playVanStatus: Sound.status.PAUSED
-        })
-    }
 
     render() {
         return (
             <div>
                 <h4>Seasonal Affective Thinking</h4>
                 <div className='light-container'>
-                    <div className='van-light' onMouseEnter={this.makeVanSound} onMouseLeave={this.pauseVanSound}>V</div>
-                    <Sound url={this.state.vanSound} playStatus={this.state.playVanStatus} /> 
+                    <FigOne />
                     <Sound url={this.state.kimmiSound} playStatus={this.state.playKimmiStatus} />
                     <div className='kimmi-light' onMouseEnter={this.makeKimmiSound} onMouseLeave={this.pauseKimmiSound}>K</div>
                 </div>
