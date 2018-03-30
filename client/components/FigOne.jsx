@@ -34,7 +34,7 @@ class FigOne extends React.Component {
         return (
             <div>
             <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} /> 
-               <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>vhv</div>
+               <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>1</div>   
                <Progress theme={{
                     success: { symbol: ' ', color: '#e9aba9' },
                     active: { symbol: ' ', color: '#f2db82' },

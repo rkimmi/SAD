@@ -5,12 +5,15 @@ import request from 'superagent'
 
 import FigOne from './FigOne'
 import FigTwo from './FigTwo'
+import Api from './Api'
 
 class App extends React.Component {
     constructor (props) {
         super (props)
         this.state = {
-            weatherObj: {}
+            weatherObj: {
+                temp_f: 0
+            }
         }
         this.getWeather = this.getWeather.bind(this)
     }
@@ -20,8 +23,8 @@ class App extends React.Component {
 
     getWeather () {
         request
-        .get('HTTP: http://api.apixu.com/v1/current.json?key=c019052f11644461a6c21207183003&q=Auckland')
-        .set('Key', 'c019052f11644461a6c21207183003')
+        .get('http://api.apixu.com/v1/current.json?key=c019052f11644461a6c21207183003&q=Auckland')
+        // .set('Key', 'c019052f11644461a6c21207183003')
         .set('Accept', 'application/json')
         .then(res =>
         this.setState({
@@ -35,8 +38,9 @@ class App extends React.Component {
             <div>
                 <h4>Seasonal Affective Thinking</h4>
                 <div className='light-container'>
-                    <FigOne mood={this.state.weatherObj}/>
+                    <FigOne />
                     <FigTwo />
+                    <Api mood={this.state.weatherObj} />
                 </div>
             </div>
         )

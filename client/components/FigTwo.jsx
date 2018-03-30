@@ -3,6 +3,7 @@ import Sound from 'react-sound'
 
 import { Progress } from 'react-sweet-progress';
 
+
 class FigTwo extends React.Component {
     constructor (props) {
         super (props)
@@ -33,7 +34,7 @@ class FigTwo extends React.Component {
     render() {
         return (
             <div>
-                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}></div>
+                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>2</div>
                     <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
                     <Progress theme={{
                         success:
