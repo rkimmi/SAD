@@ -4,23 +4,19 @@
 }
 
 .light {
- width: 100px;
- height: 100px;
+    background-image: url('fireball.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
 }
 
-.van-light {
 
-}
-
-.van-light:hover {
-    border-style: dotted;
-    border-color: blue;
-}
-
-.kimmi-light:hover {
-    border-style: dotted;
-    border-color: green;
-}
-
-h1 {
-}
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  
+.zoom {
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
