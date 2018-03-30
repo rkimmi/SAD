@@ -15,7 +15,7 @@ class App extends React.Component {
         }
         this.getWeather = this.getWeather.bind(this)
     }
-    componentDidMount () {
+    componentWillMount () {
         this.getWeather()
     }
 
@@ -37,8 +37,7 @@ class App extends React.Component {
                 <h4>Seasonal Affective Thinking</h4>
                 {this.state.weatherObj && <div className='light-container'>
                     <FigOne />
-                    <FigTwo mood={this.state.weatherObj}/>
-                    <Api mood={this.state.weatherObj} />
+                    <FigTwo />
                 </div>}
             </div>
         )
