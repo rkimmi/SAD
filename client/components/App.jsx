@@ -11,9 +11,7 @@ class App extends React.Component {
     constructor (props) {
         super (props)
         this.state = {
-            weatherObj: {
-                temp_f: 0
-            }
+            weatherObj: null
         }
         this.getWeather = this.getWeather.bind(this)
     }
@@ -37,11 +35,11 @@ class App extends React.Component {
         return (
             <div>
                 <h4>Seasonal Affective Thinking</h4>
-                <div className='light-container'>
+                {this.state.weatherObj && <div className='light-container'>
                     <FigOne />
-                    <FigTwo />
+                    <FigTwo mood={this.state.weatherObj}/>
                     <Api mood={this.state.weatherObj} />
-                </div>
+                </div>}
             </div>
         )
     }
