@@ -29,12 +29,15 @@
 }
 
 .light {
-    background-image: url('sunny.png');
     background-size: cover;
     width: 250px;
     height: 250px;
     align-content: center;
     align-items: center;
+}
+
+.sunny {
+    background-image: url('sunny.png');
 }
 
 
