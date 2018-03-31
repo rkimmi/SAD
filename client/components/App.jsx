@@ -1,19 +1,19 @@
 import React from 'react'
 import Sound from 'react-sound'
 
-import FigOne from './FigOne'
-import FigTwo from './FigTwo'
+import Today from './Today'
+import Tomorrow from './Tomorrow'
 
 const App = () => {
         return (
             <div>
                     <div className='wrapper'>
                         <div className='light-container two'>
-                            <FigOne  />
+                            <Today />
                             <h4> Today </h4>
                         </div>
                         <div className='light-container three'>
-                            <FigTwo  />
+                            <Tomorrow  />
                             <h4> Tomorrow </h4>
                         </div>
                     </div>

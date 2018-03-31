@@ -1,16 +1,14 @@
 import React from 'react'
 import Sound from 'react-sound'
 
-import { Progress } from 'react-sweet-progress';
+import ApiTomorrow from './ApiTomorrow'
 
-import ApiOne from './ApiOne'
-
-class FigOne extends React.Component {
+class Tomorrow extends React.Component {
     constructor (props) {
         super (props)
         this.state = {
             isHovered: false,
-            figOneSound: 'sounds/vanessa2.wav',
+            figTwoSound: 'sounds/kimmi.wav',
             playStatus: Sound.status.PAUSED
         }
         this.makeSound = this.makeSound.bind(this)
@@ -35,13 +33,13 @@ class FigOne extends React.Component {
     render() {
         return (
             <div>
-                <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} />
+                <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
                 <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
-                <ApiOne />
+                    <ApiTomorrow />
                 </div>
             </div>
         )
     }
 }
 
-export default FigOne
+export default Tomorrow

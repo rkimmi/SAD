@@ -1,14 +1,16 @@
 import React from 'react'
 import Sound from 'react-sound'
 
-import ApiTwo from './ApiTwo'
+import { Progress } from 'react-sweet-progress';
 
-class FigTwo extends React.Component {
+import ApiToday from './ApiToday'
+
+class Today extends React.Component {
     constructor (props) {
         super (props)
         this.state = {
             isHovered: false,
-            figTwoSound: 'sounds/kimmi.wav',
+            figOneSound: 'sounds/vanessa2.wav',
             playStatus: Sound.status.PAUSED
         }
         this.makeSound = this.makeSound.bind(this)
@@ -33,13 +35,13 @@ class FigTwo extends React.Component {
     render() {
         return (
             <div>
-                <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
+                <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} />
                 <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
-                    <ApiTwo />
+                <ApiToday />
                 </div>
             </div>
         )
     }
 }
 
-export default FigTwo
+export default Today
