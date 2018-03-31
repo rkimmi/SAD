@@ -35,7 +35,7 @@ class App extends React.Component {
         return (
             <div className='wrapper'>
                 <div className='one'>
-                    <h4>Seasonal Affective Thinking</h4>
+                    <h4> </h4>
                 </div>
                 {this.state.weatherObj && <div className='light-container two'>
                     <FigOne mood={this.state.weatherObj} />

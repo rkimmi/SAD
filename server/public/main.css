@@ -11,7 +11,7 @@
   .two { 
     align-content: center;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 250px;
     margin-top: 180px;
     margin-right: 60px;
 
@@ -25,7 +25,7 @@
 
 .light-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .light {
