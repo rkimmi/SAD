@@ -11,7 +11,7 @@
   .two { 
     align-content: center;
     align-items: center;
-    margin-left: 250px;
+    margin-left: 220px;
     margin-top: 180px;
     margin-right: 60px;
 
@@ -30,8 +30,8 @@
 
 .light {
     background-size: cover;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     align-content: center;
     align-items: center;
 }
@@ -41,7 +41,7 @@
 }
 
 .rainy {
-    background-image: url('rainy.png');
+    background-image: url('raina.png');
 }
 
 .cloudy {
