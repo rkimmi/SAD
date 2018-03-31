@@ -1,6 +1,8 @@
 import React from 'react'
 import Sound from 'react-sound'
 
+import ApiTwo from './ApiTwo'
+
 class FigTwo extends React.Component {
     constructor (props) {
         super (props)
@@ -31,10 +33,11 @@ class FigTwo extends React.Component {
     render() {
         return (
             <div>
+                <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
                 <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
+                    <ApiTwo />
                 </div>
-                    <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
-                </div>
+            </div>
         )
     }
 }

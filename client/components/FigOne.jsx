@@ -3,6 +3,8 @@ import Sound from 'react-sound'
 
 import { Progress } from 'react-sweet-progress';
 
+import ApiOne from './ApiOne'
+
 class FigOne extends React.Component {
     constructor (props) {
         super (props)
@@ -33,9 +35,11 @@ class FigOne extends React.Component {
     render() {
         return (
             <div>
-            <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} /> 
-               <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}></div>   
-                    </div>
+                <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} />
+                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
+                <ApiOne />
+                </div>
+            </div>
         )
     }
 }
