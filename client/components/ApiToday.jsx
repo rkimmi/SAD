@@ -26,6 +26,19 @@ class ApiToday extends React.Component {
   }
 
   render () {
+    if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('Rain' || 'rain')) {
+      return (
+        <div className='light rainy'></div>
+      )
+    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('Cloud' || 'cloud')) {
+    return (
+      <div className='light cloudy'></div>
+    )
+    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('Sun' || 'sun')) {
+    return (
+      <div className='light sunny'></div>
+    )
+  }
     return (
       <div>
         {this.state.weatherObj && <h3>{this.state.weatherObj.current.condition.text}</h3>}

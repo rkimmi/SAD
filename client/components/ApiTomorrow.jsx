@@ -39,6 +39,11 @@ class ApiTomorrow extends React.Component {
         <div className='light sunny'></div>
       )
     }
+    return (
+      <div>
+        {this.state.weatherObj && <h3>{this.state.weatherObj.forecast.forecastday[0].day.condition.text}</h3>}
+      </div>
+    )
   }
 }
 
