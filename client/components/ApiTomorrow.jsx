@@ -1,8 +1,6 @@
 import React from 'react'
 import request from 'superagent'
 
-import { Progress } from 'react-sweet-progress';
-
 
 class ApiTomorrow extends React.Component {
   constructor(props) {
@@ -12,7 +10,7 @@ class ApiTomorrow extends React.Component {
     }
     this.getWeather = this.getWeather.bind(this)
   }
-  componentWillMount() {
+  componentWillMount () {
     this.getWeather()
   }
 
@@ -27,14 +25,21 @@ class ApiTomorrow extends React.Component {
       )
   }
 
-    render() {
-        return (
-            <div>
-                {this.state.weatherObj && <h3>{this.state.weatherObj
-                    .forecast.forecastday[0].day.condition.text}</h3>}
-            </div>
-        )
+  render () {
+    if (this.state.weatherObj && this.state.weatherObj.forecast.forecastday[0].day.condition.text.includes('rain')) {
+      return (
+        <div className='light rainy'></div>
+      )
+    } else if (this.state.weatherObj && this.state.weatherObj.forecast.forecastday[0].day.condition.text.includes('cloud')) {
+      return (
+        <div className='light cloudy'></div>
+      )
+    } else if (this.state.weatherObj && this.state.weatherObj.forecast.forecastday[0].day.condition.text.includes('sun')) {
+      return (
+        <div className='light sunny'></div>
+      )
     }
+  }
 }
 
 export default ApiTomorrow

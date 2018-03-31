@@ -1,8 +1,6 @@
 import React from 'react'
 import request from 'superagent'
 
-import { Progress } from 'react-sweet-progress';
-
 
 class ApiToday extends React.Component {
   constructor(props) {
