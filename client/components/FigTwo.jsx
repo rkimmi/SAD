@@ -31,7 +31,7 @@ class FigTwo extends React.Component {
     render() {
         return (
             <div>
-                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>2</div>
+                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}></div>
                     <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
                 </div>
         )
