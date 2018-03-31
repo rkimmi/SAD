@@ -38,6 +38,10 @@ class ApiToday extends React.Component {
     return (
       <div className='light sunny'></div>
     )
+  } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('cast')) {
+    return (
+      <div className='light sunny'></div>
+    )
   }
     return (
       <div>
