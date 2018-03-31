@@ -41,9 +41,10 @@ class App extends React.Component {
                     <FigOne mood={this.state.weatherObj} />
                 </div>
                 }
-                <div className='light-container three'>
+                {this.state.weatherObj && <div className='light-container three'>
                     <FigTwo />
                 </div>
+                }
             </div>
         )
     }
