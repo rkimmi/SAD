@@ -19,7 +19,6 @@ class Tomorrow extends React.Component {
         this.setState({
             isHovered: true,
             playStatus: Sound.status.PLAYING
-            // might change to fig 1 specific
         })
     }
 

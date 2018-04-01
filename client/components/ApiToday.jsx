@@ -26,21 +26,24 @@ class ApiToday extends React.Component {
   }
 
   render () {
-    if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('Rain' || 'rain')) {
+    if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('rain') >= 0) {
       return (
         <div className='light rainy'></div>
       )
-    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('Cloud' || 'cloud')) {
+    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cloud') >= 0) {
     return (
       <div className='light cloudy'></div>
     )
-    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('Sun' || 'sun')) {
+    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('sun') >= 0) {
     return (
       <div className='light sunny'></div>
     )
-  } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.includes('cast')) {
+  } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cast') >= 0) {
     return (
+      <div>
       <div className='light sunny'></div>
+      <img src={`${this.state.weatherObj.current.condition.icon}`} /> 
+      </div>
     )
   }
     return (
