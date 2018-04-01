@@ -8,7 +8,7 @@ class Tomorrow extends React.Component {
         super (props)
         this.state = {
             isHovered: false,
-            figTwoSound: 'sounds/kimmi.wav',
+            figTwoSound: 'sounds/voice.m4a',
             playStatus: Sound.status.PAUSED
         }
         this.makeSound = this.makeSound.bind(this)

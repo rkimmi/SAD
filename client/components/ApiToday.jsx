@@ -41,14 +41,12 @@ class ApiToday extends React.Component {
   } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cast') >= 0) {
     return (
       <div>
-      <div className='light sunny'></div>
-      <img src={`${this.state.weatherObj.current.condition.icon}`} /> 
+      <div className='light sunny'></div> 
       </div>
     )
   }
     return (
       <div>
-        {this.state.weatherObj && <h3>{this.state.weatherObj.current.condition.text}</h3>}
       </div>
     )
   }

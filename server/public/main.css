@@ -17,7 +17,7 @@ body {
     align-items: center;
     margin-left: 220px;
     margin-top: 180px;
-    margin-right: 60px;
+    margin-right: 100px;
 
   }
   .three {
@@ -45,11 +45,11 @@ body {
 }
 
 .rainy {
-    background-image: url('raina.png');
+    background-image: url('charcoal.png');
 }
 
 .cloudy {
-    background-image: url('cloudy.png');
+    background-image: url('star.png');
 }
 
 
