@@ -41,17 +41,20 @@ body {
 }
 
 .sunny {
-    background-image: url('sunny.png');
+    background-image: url('sunpen.png');
 }
 
 .rainy {
-    background-image: url('charcoal.png');
+    background-image: url('rainpen.png');
 }
 
 .cloudy {
-    background-image: url('star.png');
+    background-image: url('cloudpen.png');
 }
 
+h4 {
+    font-family: 'Amiri', serif;
+}
 
 .zoom:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
