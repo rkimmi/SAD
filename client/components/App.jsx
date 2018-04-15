@@ -1,22 +1,16 @@
 import React from 'react'
-import Sound from 'react-sound'
+import {Route, Switch} from 'react-router-dom'
 
-import Today from './Today'
-import Tomorrow from './Tomorrow'
+import Home from './Home'
+import Sad from './Sad'
 
 const App = () => {
         return (
             <div>
-                    <div className='wrapper'>
-                        <div className='light-container two'>
-                            <Today />
-                            <h4> Today </h4>
-                        </div>
-                        <div className='light-container three'>
-                            <Tomorrow  />
-                            <h4> Tomorrow </h4>
-                        </div>
-                    </div>
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route path='/sad' component={Sad} />
+                </Switch>
             </div>
         )
     }

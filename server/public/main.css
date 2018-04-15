@@ -41,15 +41,15 @@ body {
 }
 
 .sunny {
-    background-image: url('sunpen.png');
+    background-image: url('sunny.png');
 }
 
 .rainy {
-    background-image: url('rainpen.png');
+    background-image: url('raina.png');
 }
 
 .cloudy {
-    background-image: url('cloudpen.png');
+    background-image: url('cloudy.png');
 }
 
 h4 {
