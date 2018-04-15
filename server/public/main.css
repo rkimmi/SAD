@@ -27,6 +27,18 @@ body {
 
   }
 
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-box {
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ padding: 100px;
+}
+
 .light-container {
     display: flex;
     flex-direction: column;
