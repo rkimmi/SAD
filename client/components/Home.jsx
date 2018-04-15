@@ -7,7 +7,7 @@ const Home = () => {
             <div>
                 <div className='home-container'>
                 <div className='text-box'>
-                <Link to='/sad'>go to sad!</Link>
+                <Link to='/sad'><img src='starangel.png'/></Link>
                 </div>
                 </div>
             </div>
