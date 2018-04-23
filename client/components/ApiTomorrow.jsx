@@ -26,23 +26,19 @@ class ApiTomorrow extends React.Component {
   }
 
   render () {
-    if (this.state.weatherObj && this.state.weatherObj.forecast.forecastday[0].day.condition.text.includes('rain')) {
+    if (this.state.weatherObj) {
       return (
-        <div className='light rainy'></div>
-      )
-    } else if (this.state.weatherObj && this.state.weatherObj.forecast.forecastday[0].day.condition.text.includes('cloud')) {
-      return (
-        <div className='light cloudy'></div>
-      )
-    } else if (this.state.weatherObj && this.state.weatherObj.forecast.forecastday[0].day.condition.text.includes('sun')) {
-      return (
-        <div className='light sunny'></div>
+        <div className='light-container three zoom'>
+          <div className='light rainy'></div>
+          <div className='name'>
+            <h4>{this.state.weatherObj.forecast.forecastday[0].day.condition.text}</h4>
+          </div>
+        </div>
       )
     }
     return (
       <div>
-        {this.state.weatherObj && <h3>{this.state.weatherObj.forecast.forecastday[0].day.condition.text}</h3>}
-      </div>
+        </div>
     )
   }
 }

@@ -34,7 +34,7 @@ class Today extends React.Component {
 
     render() {
         return (
-                <div className='light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
+                <div onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
                 <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} /> 
                 <ApiToday />
                 </div>

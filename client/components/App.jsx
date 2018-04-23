@@ -1,17 +1,20 @@
 import React from 'react'
-import {Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Home from './Home'
 import Setup from './Setup'
+import Today from './Today'
 
 const App = () => {
-        return (
-            <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/sad' component={Setup} />
-            </Switch>
-        )
-    }
+    return (
+        <Router>
+            <div>
+                <Route exact path='/' component={Home} />
+                <Route path='/sad' component={Setup} />
+            </div>
+        </Router>
+    )
+}
 
 
 
