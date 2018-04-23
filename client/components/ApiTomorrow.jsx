@@ -29,11 +29,11 @@ class ApiTomorrow extends React.Component {
     if (this.state.weatherObj) {
       return (
         <div className='light-container three zoom'>
-          <div className='light rainy'></div>
-          <div className='name'>
-            <h4>{this.state.weatherObj.forecast.forecastday[0].day.condition.text}</h4>
+        <div className='light'></div>          
+        <div className='nametag'>
+            <h4 className='name'>'{this.state.weatherObj.forecast.forecastday[0].day.condition.text}'</h4>
+            </div>
           </div>
-        </div>
       )
     }
     return (
