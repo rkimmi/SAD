@@ -31,7 +31,7 @@ class ApiTomorrow extends React.Component {
         <div className='light-container three zoom'>
         <div className='light'></div>          
         <div className='nametag'>
-            <h4 className='name'>'{this.state.weatherObj.forecast.forecastday[0].day.condition.text}'</h4>
+            <h4 className='name'>' {this.state.weatherObj.forecast.forecastday[0].day.condition.text} '</h4>
             </div>
           </div>
       )

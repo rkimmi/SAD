@@ -29,9 +29,10 @@ class ApiToday extends React.Component {
     if (this.state.weatherObj) {
       return (
         <div className='light-container three zoom'>
-        <div className='light'></div>
+        <div className='light'>
+        </div>
           <div className='nametag'>
-            <h4 className='name'>'{this.state.weatherObj.current.condition.text}'</h4>
+            <h4 className='name'>' {this.state.weatherObj.current.condition.text} '</h4>
           </div>
         </div>
       )
