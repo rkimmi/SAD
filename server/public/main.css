@@ -63,12 +63,14 @@ html, body {
 }
 
 .light {
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 300px;
-    height: 300px;
+    height: 400px;
     text-align: center;
     align-content: center;
     align-items: center;
+    background-image: url('background.png')
 }
 
 .nametag {
@@ -76,8 +78,9 @@ html, body {
     flex-direction: column;
     justify-content: last baseline;
     width: 100%;
+    height: 70px;
     background-color: whitesmoke;
-    margin-top: 60px;
+    
 }
 .name {
     font-family: 'Homemade Apple', cursive;
