@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
-        <div>
             <div className='home-container'>
                 <Link to='/sad'><img className='angel-pic' src='starangeldither.png' /></Link>
                 <div className='text-box'>
@@ -15,7 +14,6 @@ const Home = () => {
                 Mauris pharetra facilisis sapien, quis pharetra magna blandit et. Pellentesque nec mi orci. Donec faucibus efficitur porta. Fusce consectetur eros risus, eget posuere velit elementum at. Cras quis lectus nec lacus ultrices convallis vel vel arcu. Duis vel felis id lorem rutrum gravida et varius magna. Etiam suscipit luctus nisl, scelerisque tempus lacus porttitor porta. Fusce odio quam, faucibus vel elit ultrices, dignissim tincidunt est. Sed placerat venenatis metus quis ultricies. Morbi quis rhoncus risus, et semper nisi. Proin lorem tortor, finibus et risus vitae, posuere scelerisque lectus. Nullam lacinia consectetur tellus, suscipit consectetur erat sollicitudin eu. </p>
                 </div>
             </div>
-        </div>
     )
 }
 
