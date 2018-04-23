@@ -25,26 +25,46 @@ class ApiToday extends React.Component {
       )
   }
 
+  // render () {
+  //   if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('rain') >= 0) {
+  //     return (
+  //       <div className='light rainy'></div>
+  //     )
+  //   } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cloud') >= 0) {
+  //   return (
+  //     <div className='light cloudy'></div>
+  //   )
+  //   } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('sun') >= 0) {
+  //   return (
+  //     <div className='light sunny'></div>
+  //   )
+  // } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cast') >= 0) {
+  //   return (
+  //     <div>
+  //     <div className='light sunny'></div> 
+  //     </div>
+  //   )
+  // }
+  //   return (
+  //     <div>
+  //     </div>
+  //   )
+  // }
+
   render () {
-    if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('rain') >= 0) {
-      return (
-        <div className='light rainy'></div>
+    if (this.state.weatherObj) {
+      let temp_f = this.state.weatherObj.current.temp_f
+      return (       
+        <svg id='circle-box' >
+          <filter id="blurMe">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+          </filter>
+          <g transform="translate(90, 90)">
+          <circle id='circle' cx={temp_f} cy={temp_f} r={temp_f} filter="url(#blurMe)" />
+          </g>
+        </svg>
       )
-    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cloud') >= 0) {
-    return (
-      <div className='light cloudy'></div>
-    )
-    } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('sun') >= 0) {
-    return (
-      <div className='light sunny'></div>
-    )
-  } else if (this.state.weatherObj && this.state.weatherObj.current.condition.text.toLowerCase().indexOf('cast') >= 0) {
-    return (
-      <div>
-      <div className='light sunny'></div> 
-      </div>
-    )
-  }
+    }
     return (
       <div>
       </div>

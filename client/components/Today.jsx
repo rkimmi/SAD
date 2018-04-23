@@ -34,12 +34,10 @@ class Today extends React.Component {
 
     render() {
         return (
-            <div>
-                <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} />
-                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
+                <div className='light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
+                <Sound url={this.state.figOneSound} playStatus={this.state.playStatus} /> 
                 <ApiToday />
                 </div>
-            </div>
         )
     }
 }

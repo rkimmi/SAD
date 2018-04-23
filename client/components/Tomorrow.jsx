@@ -33,7 +33,7 @@ class Tomorrow extends React.Component {
         return (
             <div>
                 <Sound url={this.state.figTwoSound} playStatus={this.state.playStatus} />
-                <div className='light zoom' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
+                <div className='light' onMouseEnter={this.makeSound} onMouseLeave={this.pauseSound}>
                     <ApiTomorrow />
                 </div>
             </div>
